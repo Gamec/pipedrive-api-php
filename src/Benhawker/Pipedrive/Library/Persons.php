@@ -28,6 +28,18 @@ class Persons
     }
 
     /**
+     * Returns list of persons
+     *
+     * @param int $start offset
+     * @param int $limit limit
+     * @return array list of persons
+     */
+    public function getList($start = 0, $limit = null)
+    {
+        return $this->curl->get('persons', array('start' => $start, 'limit' => $limit));
+    }
+
+    /**
      * Returns a person
      *
      * @param  int   $id pipedrive persons id
