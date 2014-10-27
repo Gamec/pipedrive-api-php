@@ -39,7 +39,7 @@ class Organizations
      */
     public function getById($id)
     {
-        return $this->curl->get('deals/' . $id);
+        return $this->curl->get('organizations/' . $id);
     }
 
     /**
