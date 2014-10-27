@@ -73,6 +73,16 @@ class Deals
     }
 
     /**
+     * Removes a deal
+     *
+     * @param int $dealId pipedrives deal Id
+     */
+    public function delete($dealId)
+    {
+        return $this->curl->delete('deals/'.$dealId);
+    }
+
+    /**
      * Moves deal to a new stage
      *
      * @param  int   $dealId  deal id

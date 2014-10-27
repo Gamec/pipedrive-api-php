@@ -92,4 +92,15 @@ class Persons
 
         return $this->curl->post('persons', $data);
     }
+
+    /**
+     * Removes a person
+     *
+     * @param int $personId pipedrives person Id
+     */
+    public function delete($personId)
+    {
+        return $this->curl->delete('persons/'.$personId);
+    }
+
 }
